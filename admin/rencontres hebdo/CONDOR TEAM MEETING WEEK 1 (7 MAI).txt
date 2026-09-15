@@ -1,0 +1,15 @@
+CONDOR TEAM MEETING WEEK 1 (7 MAI)
+
+1. POINTS DE DISCUSSIONS 
+	i. presentations et brises glace
+	ii. Discussion sur la vision collective du projet
+	iii. Discussion sur les pistes de solutions
+	iv. Superviseur : Toby Dylan Hocking
+	v. Repartition de taches
+2. Varia
+3. retour sur les decisions prises : 
+	i. mit en accord sur les taches
+	ii. utilise react a la place de stack html...
+	
+4. planification de la rencontre de la semaine prochaine 
+5. FIN de la rencontre (consensus)

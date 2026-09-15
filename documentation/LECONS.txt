@@ -1,0 +1,11 @@
+description: Leçon d'ingénierie sur la précision des coordonnées GPS par rapport à la taille des cellules raster 30m
+
+Une cellule raster 30m (1 arc-seconde) mesure environ 30m × 20m à la latitude du Québec environ 45 degrés).
+
+Une erreur de 4.5m (0.0000401) sur une coordonnée hardcoded suffit à traverser une frontière de cellule si le point est proche du bord — soit environ 15% de la largeur d'une cellule.
+
+**Découvert lors du test d'alignement DEM/OSM** : _SOMMET_LAT = 45.3118 plaçait Mont Orford en cellule (678, 570), alors que les vraies coordonnées OSM `=lat=45.3118401 le placent en (677, 570).
+
+**Why:** Les coordonnées approximatives hardcodées ne sont pas fiables pour des tests à résolution 30m.
+
+**À l'avenir...** Toujours dériver les coordonnées de référence depuis la source autoritaire (OSM, DEM, etc.) plutôt que de les hardcoder. Dans les tests, utiliser les vraies coordonnées OSM via `osm_features` plutôt que des constantes approximatives.

@@ -1,0 +1,8 @@
+geoJSON : format de type json standardiser pour decrier des features geographique , 
+https://geojson.org/
+
+
+linestring vs polygon 
+
+linestring = serie de points connecte
+polygon = serie ferme de points connecte

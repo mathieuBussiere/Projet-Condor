@@ -1,0 +1,2 @@
+React-Leaflet-MGRS-Graticule est la librairie de graticule MGRS pour React-Leaflet. Elle permet d'afficher une grille de coordonnées MGRS (Military Grid Reference System) sur une carte Leaflet intégrée dans une application React.
+C'elle ci a étit forker pour permettre de la mettre en typescript et de la rendre compatible avec react-leaflet v4.

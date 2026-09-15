@@ -1,0 +1,50 @@
+exploration web :  openstreetmap.org
+
+overpass api : https://wiki.openstreetmap.org/wiki/Overpass_API/Python_API
+install aussi automatiquement : numpy, shapely, osm2geojson
+
+
+overpass node : https://wiki.openstreetmap.org/wiki/Node
+element de base(core), consiste d'un point (id,lat,lon, tags*)
+peut avoir des tags pour expliquer son purpose de forme key = value
+
+
+ELEMENTS IMPORTANTS : 
+
+
+Type	Ce que c'est				Exemples 
+Node	Un point (lat/lon)			Sommet, source d'eau, croisement de sentier
+Way	Séquence ordonnée de nodes		Sentier, route, rivière, contour de forêt
+RelationGroupe de nodes/ways avec des rôles	Zone forestière complexe, frontière admin, réseau de sentiers
+
+json format : 
+{
+  "elements": [
+    { "type": "node", "id": 123, "lat": 45.5, "lon": -73.6, "tags": {...} },
+    { "type": "way",  "id": 456, "nodes": [123, 124, 125], "tags": {...} },
+    { "type": "relation", "id": 789, "members": [...], "tags": {...} }
+  ]
+}
+
+over pass QL : Overpasse Query Language -> langage custom pour interoger overpass API.
+
+structures d'une query : 
+
+1. settings : [out:json][timeout:{_TIMEOUT}]; [maxsize:] optionnel
+2. filtre geographique : 
+
+
+	i. bbox : boite avec coordonnes : 
+	way["highway"~"path|track"](46.13,-74.68,46.36,-74.35);
+	
+	ii. area : frontier officielle, genre Quebec city, peut etre genre Banff national park
+	area["name"="Parc national de la Jacques-Cartier"]["boundary"="national_park"]->.parc; 
+	(noter ici l'usage de ->. pour donner un nickname)
+	way["highway"~"path|track"](area.parc);
+	iii. around (rayon autour d'un point)
+	// Rayon autour de coordonnées fixes
+	way["waterway"](around:500,46.21,-74.59);
+
+	// Rayon autour des résultats d'une requête précédente
+	node["natural"="peak"](around:2000,46.21,-74.59)->.sommets;
+	way["highway"](around.sommets:300);

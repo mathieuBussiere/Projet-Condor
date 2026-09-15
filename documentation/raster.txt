@@ -1,0 +1,35 @@
+
+
+Bresenham's line algorithm :
+
+Quand on a un segment entre deux points GPS (convertis en (row0,col0) et (row1,col1) dans le grid), on veut savoir quelles cellules il traverse. L'approche naïve : interpoler avec des floats sur chaque pixel — ça peut manquer des cellules ou en doubler.
+
+Bresenham fait ça avec seulement des entiers, en accumulant une "erreur" :
+
+dx = abs(col1 - col0), 
+dy = abs(row1 - row0)
+error = dx - dy
+
+à chaque pas :
+  si error > 0 → avancer horizontalement, error -= 2*dy
+  sinon        → avancer verticalement,   error += 2*dx
+Résultat : chaque cellule touchée est marquée exactement une fois, sans float. C'est ce que fait rasterio sous le capot pour les LineStrings.
+
+
+Scan line : 
+
+Pour un polygone (vegetation, wetland, etc.), il faut marquer toutes les cellules à l'intérieur :
+
+Pour chaque ligne (row) dans la bbox du polygone
+Trouver tous les points d'intersection de cette ligne horizontale avec les arêtes du polygone
+Trier ces intersections gauche → droite
+Remplir les colonnes entre les paires (entrée, sortie, entrée, sortie...)
+
+row = 5 :  ──────────────────────────────────
+           [vide] [X=2 entree] [rempli] [X=7 sortie] [vide]
+C'est le principe du "ray casting" — un rayon horizontal qui compte les croisements de frontière. rasterio implémente ça aussi nativement.
+
+
+Bresenham (lignes) : pour tracer un segment (row0,col0)→(row1,col1) sur une grille discrète, on accumule une erreur entière — si error > 0 on avance horizontalement, sinon verticalement. Aucun float, aucune cellule manquée ni dupliquée. rasterio fait ça pour chaque LineString.
+
+Scan-line (polygones) : pour chaque row dans la bbox du polygone, on trouve les intersections de ce scanline horizontal avec les arêtes du polygone, on trie gauche→droite, on remplit entre les paires (entrée/sortie). C'est le ray casting appliqué ligne par ligne. rasterio fait ça pour chaque Polygon.

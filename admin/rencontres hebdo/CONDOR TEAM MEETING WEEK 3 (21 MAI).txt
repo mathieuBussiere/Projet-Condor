@@ -1,0 +1,19 @@
+CONDOR TEAM MEETING WEEK 3 (21 MAI)
+
+1. POINTS DE DISCUSSIONS 
+	i. travail parallel avec rust (update path)
+	ii. 
+
+2. Varia
+3. retour sur les decisions prises :
+4. planification de la rencontre de la semaine prochaine 
+5. FIN de la rencontre (consensus)
+
+
+
+(
+
+
+
+
+

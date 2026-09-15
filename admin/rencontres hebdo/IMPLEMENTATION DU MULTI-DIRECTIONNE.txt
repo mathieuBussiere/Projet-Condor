@@ -1,0 +1,13 @@
+IMPLEMENTATION DU MULTI-DIRECTIONNEL
+
+CONTEXTE DU PROBLEME : LA FONCTION DE HIKING DE TOBLER DONNE UN BONUS DE VITESSE SIGNE (OPTIMAL PENTE = -5%). l'implementation courante ne considere pas le signe et a uphill == downhill
+
+le probleme est architectural, le cost grid est precomputed par cellule mais un cout directionnel doit dependre des arretes
+
+A* devra donc calculer le edge cost on the fly
+
+PLAN : 
+
+i. split cost_grid en 2 parties 
+	1. osm_mult (les penalites de terrain, *output de _compute_multiplicateurs(osm, weights)*
+	2. visulatisation_grid (la grid courrament utilise pour debug et visualise)

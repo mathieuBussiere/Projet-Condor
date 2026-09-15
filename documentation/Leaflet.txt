@@ -1,0 +1,4 @@
+Leaflet
+
+Leaflet est le component de la carte utilisé dans l'application. Il est basé sur la bibliothèque Leaflet.js, qui est une bibliothèque JavaScript open-source pour la création de cartes interactives.
+on utilise aussi openstreetmap pour les tuiles de la carte, ce qui permet d'afficher des cartes détaillées et à jour.

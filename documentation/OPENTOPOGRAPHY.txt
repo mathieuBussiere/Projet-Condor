@@ -1,0 +1,5 @@
+OPENTOPOGRAPHY
+
+utilise une cle api gratuite, maximum de 50 requete par jour si user normal et 200 si academique
+
+retourne les donnees en format GeoTIFF, un format de fichier fichier imager raster ou chaque pixel est une donne d'elevation en metres pour une coordonne geo precise

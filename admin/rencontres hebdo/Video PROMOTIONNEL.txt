@@ -1,0 +1,11 @@
+Video PROMOTIONNEL : 
+
+scenes : 
+
+1.Titre -> Condor, planificateur d'itineraires
+2.Demo A* -> Calcul d'itineraire entre 2 points geogrpahique (Mont saint-joseph) 
+astuce: utilise le cache pour un resultat quasi instantanne, sinon coupe le loading screen au montage
+3. Demo export -> Exports en format .gpx ! (exporter le trace que tu viens de calculer et le save dans un folder)
+4. demo comparaison -> Comparaison de trace ! (comparaison avec le trace st joseph)
+5. outro -> Condor, planificateur d'itineraires
+

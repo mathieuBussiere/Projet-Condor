@@ -1,0 +1,3 @@
+GeoPy
+
+Sert a calculer la distance en Km entre deux points géographiques, à partir de leurs coordonnées (latitude et longitude).

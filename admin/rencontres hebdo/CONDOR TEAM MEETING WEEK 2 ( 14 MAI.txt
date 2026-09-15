@@ -1,0 +1,20 @@
+CONDOR TEAM MEETING WEEK 2 ( 14 MAI)
+
+1. POINTS DE DISCUSSIONS 
+	i. avancements si il y a lieu (code tour)
+	ii. parametres users et leur incidence sur la surface de cout
+	dessin -> 
+		OSM raster (attributs bruts)  ─┐
+		Élévation (OpenTopography)    ─┼──▶ surface de coût ──▶ pathfinding
+		Paramètres user               ─┘
+
+	iii. compatibilite MGRS 
+	iv. variation des latitudes par rapport au longitude dans la grille de cout
+	v. changement geojson pour les query overpass
+	vi. cleanup tests (my bad lol)
+
+2. Varia
+3. retour sur les decisions prises :
+	
+4. planification de la rencontre de la semaine prochaine 
+5. FIN de la rencontre (consensus)

@@ -1,0 +1,14 @@
+overpass
+pytest
+python-dotenv
+rasterio
+matplotlib
+pytest-cov
+fastapi
+fastapi[standard]
+uvicorn[standard]
+geopy
+gpxpy
+similaritymeasures
+pandas
+

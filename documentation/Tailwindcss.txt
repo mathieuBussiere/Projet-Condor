@@ -1,0 +1,4 @@
+Tailwindcss
+
+La librairie Tailwind CSS est un framework CSS utilitaire qui permet de construire rapidement des interfaces utilisateur personnalisées.
+Contrairement à d'autres frameworks CSS qui fournissent des composants préconçus, Tailwind CSS se concentre sur la fourniture de classes utilitaires qui peuvent être combinées pour créer n'importe quel design.
