@@ -1,0 +1,51 @@
+{
+  "name": "condor",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "prettier --write . && tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.10",
+    "@heroicons/react": "^2.2.0",
+    "@ngageoint/mgrs-js": "^1.0.0",
+    "@we-gold/gpxjs": "^1.1.0",
+    "gpxparser": "^3.0.8",
+    "leaflet-auto-graticule": "^2.0.0",
+    "lucide-react": "^1.14.0",
+    "mgrs": "^2.1.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-leaflet-mgrs-graticule": "file:../React-Leaflet-MGRS-Graticule"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/vite": "^4.2.4",
+    "@tanstack/react-router": "^1.169.2",
+    "@types/leaflet": "^1.9.21",
+    "@types/node": "^24.12.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "axios": "^1.16.0",
+    "cypress": "^15.15.0",
+    "eslint": "^10.2.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.5.0",
+    "leaflet": "^1.9.4",
+    "prettier": "3.8.3",
+    "react-leaflet": "^5.0.0",
+    "tailwindcss": "^4.2.4",
+    "togpx": "^0.5.4",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.58.2",
+    "vite": "^8.0.10"
+  }
+}
